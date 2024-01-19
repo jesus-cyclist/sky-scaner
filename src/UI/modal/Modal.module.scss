@@ -1,0 +1,16 @@
+.modal {
+  position: relative;
+  padding: 0.5rem 1rem;
+  z-index: 3;
+  background: var(--primary-dark);
+  color: var(--primary-light);
+  width: 100%;
+  max-width: 500px;
+  transform: scale(0.5);
+  transition: transform 0.5s ease;
+}
+
+.modalActive {
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}

@@ -1,0 +1,64 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 0.125rem;
+  grid-template-areas: 'title title' 'date date' 'status status' 'changes changes' 'duration duration' 'distance distance';
+
+  .data__title,
+  .data__cost,
+  .data__class,
+  .data__changes,
+  .data__duration,
+  .data__distance {
+    background: #327db6;
+    color: var(--light-gray);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.25rem;
+  }
+
+  .data__title {
+    grid-area: title;
+  }
+
+  .data__class {
+    grid-area: date;
+  }
+
+  .data__cost {
+    grid-area: status;
+  }
+
+  .data__class,
+  .data__cost,
+  .data__changes,
+  .data__duration,
+  .data__distance {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .data__changes {
+    grid-area: changes;
+  }
+
+  .data__duration {
+    grid-area: duration;
+  }
+
+  .data__distance {
+    grid-area: distance;
+  }
+}

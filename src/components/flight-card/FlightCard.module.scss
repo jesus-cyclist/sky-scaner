@@ -1,0 +1,114 @@
+.flightCard {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.68);
+  box-shadow: 2px 2px 15px -2px rgba(103, 98, 98, 0.68);
+  margin: 0 auto;
+  height: fit-content;
+}
+
+.flightCard__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--dark-gray);
+  padding: 0.25rem;
+  border-radius: 5px 5px 0 0;
+
+  .flightCard__flightNumber {
+    width: 100%;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      display: block;
+    }
+    span:last-child {
+      cursor: pointer;
+    }
+  }
+
+  .flightCard__companyName {
+    color: var(--light-gray);
+    font-size: 0.875rem;
+  }
+}
+
+.flightCard__plane {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 80%;
+    object-fit: cover;
+  }
+}
+
+.flightCard__data {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 0.125rem;
+  position: relative;
+
+  .data__departure,
+  .data__arrival {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+
+    .data__point {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--light-gray);
+
+      span {
+        display: block;
+      }
+    }
+
+    .data__timeScheduled,
+    .data__timeActual {
+      width: 100%;
+      font-size: 0.75rem;
+      color: var(--dark-gray);
+      font-weight: 600;
+      text-transform: uppercase;
+      background: var(--normal-gray);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.25rem;
+      span {
+        display: block;
+        color: var(--text-color);
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+.flightCard__logo {
+  background: #fff;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  top: 5%;
+  right: 50%;
+  transform: translate(50%, 0);
+  svg {
+    color: var(--accent-color);
+  }
+}
+
+// Необходима адаптивная верстка для следующих разрешений: 1920, 1366, 1024, 768, 320
