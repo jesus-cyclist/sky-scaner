@@ -23,25 +23,17 @@ export const Main = () => {
   )
   const [isModalActive, setIsModalActive] = useState<TFlight | null>(null)
 
-  const [fetching, isLoading, error] = useFetching(async (data: any) => {
-    // await new Promise((resolve): void => {
-    //   setTimeout(() => {
-    //     resolve(() => {
-    //       setFlight(data)
-    //     })
-    //   }, 3000)
-    // })
-    // await axios
-    //   .get(
-    //     'https://api.travelpayouts.com/v2/prices/latest?currency=rub&period_type=year&limit=1000&show_to_affiliates=true&sorting=price&token=f00a222924dc37ebb550ab2f9ae92666'
-    //   )
-    //   .then((data) => console.log(data))
-    //   .catch((e) => console.log(e))
+  const [fetching, isLoading, error] = useFetching(async () => {
+    await axios
+      .get(
+        'https://api.travelpayouts.com/v2/prices/latest?currency=rub&period_type=year&limit=1000&show_to_affiliates=true&sorting=price&token=f00a222924dc37ebb550ab2f9ae92666'
+      )
+      .then((data) => setFlight(data.data))
+      .catch((e) => console.log(e))
   })
 
   useEffect(() => {
-    fetching(bd.data)
-    setFlight(bd.data)
+    fetching()
   }, [])
 
   const changeFilterGate = (query: any) => {
