@@ -81,7 +81,7 @@ export const Main = () => {
     setIsModalActive(data)
   }
 
-  if (isLoading) {
+  if (isLoading || error) {
     return <Loader />
   }
 
