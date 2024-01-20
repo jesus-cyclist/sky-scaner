@@ -24,13 +24,6 @@ export const Main = () => {
   const [isModalActive, setIsModalActive] = useState<TFlight | null>(null)
 
   const [fetching, isLoading, error] = useFetching(async () => {
-    // await axios
-    //   .get(
-    //     'https://api.travelpayouts.com/v2/prices/latest?currency=rub&token=f00a222924dc37ebb550ab2f9ae92666'
-    //   )
-    //   .then((data) => setFlight(data.data))
-    //   .catch((e) => console.log(e))
-
     await axios
       .get('/v2/prices/latest', {
         params: {
@@ -45,20 +38,6 @@ export const Main = () => {
       .catch((error) => {
         console.error(error)
       })
-
-    // await axios.get()
-
-    // await axios
-    //   .get(
-    //     'https://api.travelpayouts.com/v2/prices/latest?currency=rub&token=f00a222924dc37ebb550ab2f9ae92666'
-    //   )
-    //   .then((data) => setFlight(data.data))
-    //   .catch((e) => console.log(e))
-
-    await axios
-      .get('https://jsonplaceholder.typicode.com/posts')
-      .then((data) => console.log(data))
-      .catch((e) => console.log(e))
   })
 
   useEffect(() => {
