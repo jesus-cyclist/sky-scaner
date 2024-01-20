@@ -5,7 +5,7 @@ import './styles/index.css'
 export function App() {
   return (
     <Routes>
-      <Route path={'/'} element={<MainPage />} />
+      <Route path={'/sky-scaner/'} element={<MainPage />} />
       <Route path={'/*'} element={<ForbiddenPage />} />
     </Routes>
   )
