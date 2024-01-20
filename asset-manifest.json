@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/sky-scaner/static/css/main.736f6142.css",
-    "main.js": "/sky-scaner/static/js/main.80d1976a.js",
+    "main.js": "/sky-scaner/static/js/main.2d861f1a.js",
     "static/media/plane.png": "/sky-scaner/static/media/plane.768432d7e5126b4501f8.png",
     "index.html": "/sky-scaner/index.html",
     "static/media/airplane.svg": "/sky-scaner/static/media/airplane.41b6a2a2b330a8d3515d3052a2089661.svg",
     "static/media/angle.svg": "/sky-scaner/static/media/angle.34bf1166303340094d79de71983581b6.svg",
     "static/media/check.svg": "/sky-scaner/static/media/check.57a7854bedab0e15bf8750563850ae34.svg",
     "main.736f6142.css.map": "/sky-scaner/static/css/main.736f6142.css.map",
-    "main.80d1976a.js.map": "/sky-scaner/static/js/main.80d1976a.js.map"
+    "main.2d861f1a.js.map": "/sky-scaner/static/js/main.2d861f1a.js.map"
   },
   "entrypoints": [
     "static/css/main.736f6142.css",
-    "static/js/main.80d1976a.js"
+    "static/js/main.2d861f1a.js"
   ]
 }
